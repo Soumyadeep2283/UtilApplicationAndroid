@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_user_specific_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.UserSpecificChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_backToDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/lv_userSpecificChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/sixDp"
+        android:layout_marginTop="@dimen/sixDp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:divider="@null"
+        android:dividerHeight="@dimen/tenDp"
+        android:scrollbars="none"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tenDp"
+        android:background="@drawable/drawable_write_chat_msg"
+        android:orientation="horizontal"
+        android:padding="@dimen/tenDp"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/et_writeChatMsg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".85"
+            android:hint="@string/hint_type_your_msg"
+            android:imeOptions="actionDone"
+            android:maxLength="250"
+            android:padding="@dimen/sixDp"
+            android:textColor="#80333333"
+            android:textSize="@dimen/seventeenSp" />
+
+        <ImageView
+            android:id="@+id/iv_sendChat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/tenDp"
+            android:layout_weight=".15"
+            android:src="@drawable/ic_sendchat" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fourDp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/black" />
+</LinearLayout>

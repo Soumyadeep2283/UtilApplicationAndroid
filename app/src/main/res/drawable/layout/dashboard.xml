@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".activities.DashboardActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashboard_constraintlayout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/dash_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dashBannerSize"
+            android:background="@color/colorPrimary"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/dash_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/white_dahsborad_logo"/>
+
+        <TextView
+            android:id="@+id/welcome_patname_txt"
+            android:layout_width="240dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="@dimen/tenDp"
+            android:text="Welcome"
+            android:textSize="18sp"
+            android:textColor="@color/colorYellow"
+            app:layout_constraintTop_toTopOf="@+id/dash_banner"
+            app:layout_constraintStart_toEndOf="@+id/dash_logo" />
+
+
+        <ImageView
+            android:id="@+id/menu_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menue_icon" />
+
+
+        <TextView
+            android:id="@+id/location_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/twentyfiveDp"
+            android:layout_marginLeft="@dimen/twentyfiveDp"
+            android:layout_marginBottom="@dimen/twentyfiveDp"
+            android:drawableLeft="@drawable/location_icon_52dp"
+            android:drawablePadding="@dimen/tenDp"
+            android:gravity="center"
+            android:padding="@dimen/tenDp"
+            android:text="location"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/eighteenSp"
+            app:layout_constraintBottom_toBottomOf="@+id/dash_banner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dash_banner" />
+
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/patname_txt"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginLeft="10dp"-->
+        <!--                android:layout_marginRight="160dp"-->
+        <!--                android:text="Patient"-->
+        <!--                android:textColor="@color/colorWhite"-->
+        <!--                app:layout_constraintTop_toTopOf="@+id/dash_banner"-->
+        <!--                app:layout_constraintStart_toEndOf="@+id/welcome_patname_txt"-->
+        <!--                app:layout_constraintBottom_toBottomOf="@+id/dash_banner"/>-->
+
+        <TextView
+            android:id="@+id/selfView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/twentyfiveDp"
+            android:layout_marginLeft="@dimen/twentyfiveDp"
+            android:layout_marginBottom="@dimen/twentyfiveDp"
+            android:background="@drawable/drawable_transparent__white_border"
+            android:drawableLeft="@drawable/baseline_photo_camera_white_36dp"
+            android:drawablePadding="@dimen/tenDp"
+            android:gravity="center"
+            android:padding="@dimen/tenDp"
+            android:text="Self View"
+            android:textColor="@color/white"
+            android:textSize="@dimen/eighteenSp"
+            app:layout_constraintBottom_toBottomOf="@+id/dash_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dash_banner" />
+
+        <TextView
+            android:id="@+id/select_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tenDp"
+            android:text="Select"
+            android:visibility="gone"
+            android:textColor="@color/colorDark"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_patname_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.300"/>
+
+        <RadioGroup
+            android:visibility="gone"
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tenDp"
+            app:layout_constraintTop_toTopOf="@+id/select_txt"
+            app:layout_constraintBottom_toBottomOf="@+id/select_txt"
+            app:layout_constraintStart_toEndOf="@+id/select_txt"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/name_radiobtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tenDp"
+                android:text="@string/name"
+                android:textColor="@color/colorWhite"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/code_radiobtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tenDp"
+                android:text="@string/code"
+                android:textColor="@color/colorWhite"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/name_search"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/twentyDp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/half_round_bg"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="@color/red_btn_bg_color"
+            android:textSize="@dimen/eighteenSp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/search_txt"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/code_search"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="40dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/eighteenSp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/search_txt"
+            app:layout_constraintStart_toEndOf="@+id/name_search" />
+
+
+
+
+        <AutoCompleteTextView
+            android:id="@+id/search_txt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/fortyDp"
+            android:background="@drawable/drawable_search_border"
+            android:hint="Enter doctor name or code"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:padding="@dimen/tenDp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dash_banner" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tenDp"
+            android:scaleType="fitXY"
+            android:src="@drawable/search_icon_32"
+            app:layout_constraintEnd_toEndOf="@+id/search_txt"
+            app:layout_constraintTop_toTopOf="@+id/search_txt"
+            app:layout_constraintBottom_toBottomOf="@+id/search_txt"/>
+
+        <TextView
+            android:id="@+id/scheduled_consultation_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tenDp"
+            android:text="@string/labelScheduledConsultation"
+            android:textColor="@color/colorDark"
+            app:layout_constraintTop_toBottomOf="@+id/search_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/today_consultation_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/thirtyDp"
+            android:text="@string/labelScheduledConsultation"
+            android:textColor="@color/colorDark"
+            android:visibility="visible"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_consultation_txt">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/currentdate_appointment"
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:padding="@dimen/tenDp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/doctor_profile_img"
+                    android:layout_width="@dimen/hundredDp"
+                    android:layout_height="@dimen/hundredDp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="@dimen/tenDp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_doctors"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/date_txt"
+                    app:layout_constraintEnd_toStartOf="@+id/doctor_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/doctor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Doctor name"
+                    android:padding="@dimen/tenDp"
+                    android:textColor="@color/colorDark"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/degree_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/specialist_txt"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:hint="Specialist"-->
+                <!--                    android:textColor="@color/colorDark"-->
+                <!--                    android:padding="@dimen/tenDp"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/doctor_name"/>-->
+
+                <TextView
+                    android:id="@+id/degree_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="64dp"
+                    android:hint="Degree"
+                    android:padding="@dimen/tenDp"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doctor_name" />
+
+                <TextView
+                    android:id="@+id/date_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Date"
+                    android:padding="5dp"
+                    android:textColor="@color/colorDark"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/time_txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/degree_txt" />
+
+                <TextView
+                    android:id="@+id/time_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="Time"
+                    android:textColor="@color/colorDark"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/date_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/date_txt"
+                    app:layout_constraintTop_toTopOf="@+id/date_txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/sixteenDp"
+            android:background="@color/white"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/today_consultation_cardview">
+
+            <!--android:backgroundTint="@color/colorPrimary"-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/appointment_cardview"
+                android:layout_width="@dimen/hundredFiftyDp"
+                android:layout_height="@dimen/hundredFiftyDp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/healthreports_cardview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/appointment_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/tenDp"
+                    android:text="@string/labelAppointment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/eighteenSp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/healthreports_cardview"
+                android:layout_width="@dimen/hundredFiftyDp"
+                android:layout_height="@dimen/hundredFiftyDp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/appointment_cardview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/appointment_cardview"
+                app:layout_constraintTop_toTopOf="@+id/appointment_cardview">
+
+                <TextView
+                    android:id="@+id/healthreport_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/tenDp"
+                    android:text="@string/labelHealthReport"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/eighteenSp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/finddoctor_cardview"
+                android:layout_width="@dimen/hundredFiftyDp"
+                android:layout_height="@dimen/hundredFiftyDp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/finddoctor_byclinic_cardview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appointment_cardview">
+
+                <TextView
+                    android:id="@+id/finddoctor_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/tenDp"
+                    android:text="@string/labelDoctor"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/eighteenSp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/finddoctor_byclinic_cardview"
+                android:layout_width="@dimen/hundredFiftyDp"
+                android:layout_height="@dimen/hundredFiftyDp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/finddoctor_cardview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/finddoctor_cardview"
+                app:layout_constraintTop_toTopOf="@+id/finddoctor_cardview">
+
+                <TextView
+                    android:id="@+id/healthprofile_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/tenDp"
+                    android:text="Find Doctor By \n Clinic"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/eighteenSp" />
+            </androidx.cardview.widget.CardView>
+
+            <!--android:layout_margin="@dimen/twentyfiveDp"-->
+            <Button
+                android:id="@+id/ready_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twentyfiveDp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="@dimen/twentyfiveDp"
+                android:layout_marginBottom="@dimen/twentyfiveDp"
+                android:background="@drawable/drawable_yellow_border"
+                android:padding="@dimen/fiveDp"
+                android:text="READY"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/finddoctor_cardview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

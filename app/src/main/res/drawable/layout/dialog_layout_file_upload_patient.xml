@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/twelveDp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/labelSelectFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/eightDp"
+        android:layout_marginTop="@dimen/eightDp"
+        android:text="Document Type: "
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/fifteenSp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_uploadDocType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_white_with_red_border"
+        android:layout_marginLeft="@dimen/fourDp"
+        android:layout_marginRight="@dimen/fourDp"
+        android:drawablePadding="@dimen/eightDp"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:drawableTint="@color/colorHealthBlue"
+        android:gravity="center_vertical"
+        android:hint="Select Document Type"
+        android:padding="@dimen/sixDp"
+        android:text="Select Type"
+        android:textColor="@color/colorDarkGrey"
+        android:textColorHint="@color/colorDarkGrey"
+        android:textSize="@dimen/thirteenSp"
+        android:layout_toEndOf="@+id/labelSelectFile" />
+</RelativeLayout>

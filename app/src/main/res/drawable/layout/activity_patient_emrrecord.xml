@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_emr_operation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2"
+    tools:context=".activities.PatientEMRRecordActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_backToDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_arrow_back_white" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/labelUploadDocuments"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/titleTextSize"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/labelRecordType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/labelHealthReport"
+                android:textColor="@android:color/black"
+                android:textSize="19sp"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="@dimen/fiftyDp"
+                android:layout_marginRight="@dimen/fiftyDp"
+                android:layout_marginBottom="@dimen/fiftyDp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupFileOperation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="@dimen/fiftyDp"
+        android:layout_marginBottom="@dimen/twentyDp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelRecordType">
+
+                <RadioButton
+                    android:id="@+id/radio_prescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prescription"
+                    android:textSize="@dimen/textSize" />
+
+                <RadioButton
+                    android:id="@+id/radio_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Report"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/textSize" />
+
+        <RadioButton
+            android:id="@+id/radio_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Others"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/textSize" />
+        </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/drwable_red_round_box"
+        android:padding="@dimen/fourDp"
+        android:text="@string/upload"
+        android:textColor="@color/white"
+
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_downlaod"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupFileOperation" />
+
+    <Button
+        android:id="@+id/btn_downlaod"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/drawable_blue_round_box"
+        android:padding="@dimen/fourDp"
+        android:text="@string/download"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+
+        app:layout_constraintStart_toEndOf="@+id/btn_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_upload"
+        app:layout_constraintBottom_toBottomOf="@id/btn_upload" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

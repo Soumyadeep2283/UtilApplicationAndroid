@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_conference"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".activities.ConferenceActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_videoFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black" >
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:padding="@dimen/tenDp"
+            android:text="Timer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twentyoneSp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/tenDp"
+        android:text="@string/loading"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twentyoneSp" />
+
+    <TextView
+        android:id="@+id/tv_exitOnError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/tenDp"
+        android:background="@drawable/drawable_white_border"
+        android:gravity="center"
+        android:padding="@dimen/tenDp"
+        android:text="@string/exit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/nineteenSp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_menuPlus"
+        android:layout_width="@dimen/fiftyDp"
+        android:layout_height="@dimen/fiftyDp"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/sixteenDp"
+        android:background="@android:drawable/ic_menu_agenda"
+        android:visibility="gone" />
+</FrameLayout>

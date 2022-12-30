@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2"
+    tools:context=".activities.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/register_layout"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_backToDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/back_arrow_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/createaccount_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fortyDp"
+        android:text="@string/labelCreateAccount"
+        android:textColor="@color/colorDark"
+        android:textSize="@dimen/textSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/alreadymember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelMember"
+        android:textSize="@dimen/textSize"
+        android:textColor="@color/colorDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createaccount_txt"
+        app:layout_constraintVertical_bias="0.00999999" />
+
+
+
+            <ImageView
+                android:id="@+id/doctor_imageview"
+                android:layout_width="@dimen/hundredDp"
+                android:layout_height="@dimen/hundredDp"
+                android:layout_margin="@dimen/thirtyDp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@+id/alreadymember"
+                app:srcCompat="@mipmap/profile_image_png" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="118dp"
+                android:gravity="center"
+                android:text="Select Profile Photo"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/doctor_imageview" />
+
+
+
+            <ImageView
+                android:id="@+id/camera_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/doctor_imageview"
+                app:layout_constraintVertical_bias="0.414"
+                app:srcCompat="@drawable/camera_switch" />
+
+
+            <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twentyfiveDp"
+        android:text="@string/hint_name"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doctor_imageview" />
+
+    <EditText
+        android:id="@+id/name_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftyDp"
+        android:layout_margin="@dimen/twentyfiveDp"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:background="@drawable/drawable_white_border"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_txt" />
+
+    <TextView
+        android:id="@+id/email_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twentyfiveDp"
+        android:text="@string/hint_email_id"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_edt"/>
+
+    <EditText
+        android:id="@+id/email_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftyDp"
+        android:layout_margin="@dimen/twentyfiveDp"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:background="@drawable/drawable_white_border"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_txt" />
+
+    <TextView
+        android:id="@+id/mobile_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twentyfiveDp"
+        android:text="@string/labelMobileNo"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_edt"/>
+
+    <EditText
+        android:id="@+id/mobile_edt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftyDp"
+        android:layout_margin="@dimen/twentyfiveDp"
+        android:imeOptions="actionNext"
+        android:background="@drawable/drawable_white_border"
+        android:textSize="@dimen/textSize"
+        android:inputType="number"
+        android:maxLength="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_txt"/>
+
+    <TextView
+        android:id="@+id/address_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twentyfiveDp"
+        android:text="@string/hint_address"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_edt"/>
+
+
+            <EditText
+                android:id="@+id/address_edt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fiftyDp"
+                android:layout_margin="@dimen/twentyfiveDp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="192dp"
+                android:background="@drawable/drawable_white_border"
+                android:singleLine="true"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address_txt"/>
+
+            <!--new add will be here Check my notepad "new 1g.txt" !-->
+
+            <TextView
+                android:id="@+id/clinic_show"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fiftyDp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:padding="@dimen/tenDp"
+                android:paddingLeft="10dp"
+                android:visibility="visible"
+                android:text="Chose Clinic"
+                android:background="@drawable/drawable_white_border"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:drawablePadding="@dimen/tenDp"
+                android:textSize="@dimen/eighteenSp"
+                app:layout_constraintTop_toBottomOf="@+id/address_edt"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <CheckBox
+                android:id="@+id/tnc_box"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/twentyfiveDp"
+                android:textSize="@dimen/textSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clinic_show">
+            </CheckBox>
+
+            <TextView
+                android:id="@+id/show_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tenDp"
+                android:text="@string/hint_tnc"
+                android:textSize="@dimen/textSize"
+                android:textColor="@color/colorMarine"
+                app:layout_constraintStart_toEndOf="@+id/tnc_box"
+                app:layout_constraintBottom_toBottomOf="@+id/tnc_box"
+                app:layout_constraintTop_toTopOf="@+id/tnc_box"/>
+
+
+            <Button
+                android:id="@+id/register_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/twentyfiveDp"
+                android:text="@string/labelRegisterButton"
+                android:imeOptions="actionDone"
+                android:background="@drawable/drawable_yellow_border"
+                android:textSize="@dimen/textSize"
+                android:textColor="@color/colorRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tnc_box" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

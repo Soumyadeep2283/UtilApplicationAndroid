@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HealthDetailsActivity"
+    android:background="@drawable/bg_2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/healthsheet_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.HealthDetailsSheetActivity">
+
+        <ImageView
+            android:id="@+id/healthdetails_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentyDp"
+            android:src="@drawable/back_arrow_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentyDp"
+            android:text="@string/labelHealthDetailsSheet"
+            android:textColor="@color/colorTransparentBlack"
+            android:textSize="@dimen/titleTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/patientname_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/tenDp"
+            android:text="Patient Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_title" />
+
+        <TextView
+            android:id="@+id/patientname_edt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_white_with_border"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientname_txt"/>
+
+        <TextView
+            android:id="@+id/age_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:text="@string/age"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patientname_edt" />
+
+        <EditText
+            android:id="@+id/age_edt"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_white_with_border"
+            android:drawablePadding="@dimen/tenDp"
+            android:inputType="number"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gender_edt"
+            app:layout_constraintTop_toBottomOf="@+id/age_txt" />
+
+        <TextView
+            android:id="@+id/gender_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/tenDp"
+            android:text="@string/gender"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintBottom_toBottomOf="@+id/age_txt"
+            app:layout_constraintStart_toEndOf="@+id/age_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/age_txt" />
+
+        <TextView
+            android:id="@+id/gender_edt"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_white_with_border"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:drawablePadding="@dimen/tenDp"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorDark"
+            app:layout_constraintBottom_toBottomOf="@+id/age_edt"
+            app:layout_constraintStart_toEndOf="@+id/age_edt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/age_edt" />
+
+        <TextView
+            android:id="@+id/height_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:text="@string/height"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age_edt" />
+
+        <EditText
+            android:id="@+id/height_edt"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_white_with_border"
+            android:drawablePadding="@dimen/tenDp"
+            android:inputType="number"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/weight_edt"
+            app:layout_constraintTop_toBottomOf="@+id/height_txt" />
+
+        <TextView
+            android:id="@+id/weight_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/tenDp"
+            android:text="@string/weight"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintBottom_toBottomOf="@+id/height_txt"
+            app:layout_constraintStart_toEndOf="@+id/height_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/height_txt" />
+
+        <EditText
+            android:id="@+id/weight_edt"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_white_with_border"
+            android:drawablePadding="@dimen/tenDp"
+            android:inputType="number"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorDark"
+            app:layout_constraintBottom_toBottomOf="@+id/height_edt"
+            app:layout_constraintStart_toEndOf="@+id/height_edt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/height_edt" />
+
+        <TextView
+            android:id="@+id/bp_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:text="@string/bp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height_edt" />
+
+        <EditText
+            android:id="@+id/bp_edt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_white_with_border"
+            android:drawablePadding="@dimen/tenDp"
+            android:inputType="number"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_txt"/>
+
+        <TextView
+            android:id="@+id/lmp_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:text="LMP"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintBottom_toBottomOf="@+id/bp_txt"
+            app:layout_constraintStart_toEndOf="@+id/bp_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bp_txt"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/lmp_edt"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_white_with_border"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorDark"
+            app:layout_constraintBottom_toBottomOf="@+id/bp_edt"
+            app:layout_constraintStart_toEndOf="@+id/bp_edt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bp_edt"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_yellow_border"
+            android:text="@string/save"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorRed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_edt"/>
+        <Button
+            android:id="@+id/edit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fiftyDp"
+            android:layout_margin="@dimen/twentyDp"
+            android:padding="@dimen/tenDp"
+            android:background="@drawable/drawable_yellow_border"
+            android:text="@string/edit"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/colorRed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_edt"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

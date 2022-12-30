@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dialogplus_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/dark_grey"
+            android:padding="12dp"
+            android:text="@string/pleaseSelect"
+            android:textColor="#eee"
+            android:textSize="@dimen/twentyoneSp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/dialogplus_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_upload"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/upload"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialogplus_switchcamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_camera"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/switchCamera"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialogplus_mutespeaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_speaker_on"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/muteSpeaker"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialogplus_unmute_speaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_speaker_off"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/unMuteSpeaker"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dialogplus_mute_mic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_mic_on"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/muteMic"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialogplus_unmute_mic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_mic_off"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/unMuteMic"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dialogplus_mutevideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_video_pause"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/muteVideo"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialogplus_unmute_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_video_resume"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/unMuteVideo"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dialogplus_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_chat"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="@string/chat"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/nineteenSp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</ScrollView>

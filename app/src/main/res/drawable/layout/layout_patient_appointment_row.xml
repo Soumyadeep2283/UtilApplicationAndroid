@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hundredTwentyFiveDp"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <View
+        android:id="@+id/view_strip"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.01"
+        android:background="@color/colorLightRed" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/labelScheduleStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.45"
+            android:gravity="center_vertical"
+            android:text="08:00"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="0.05"
+            android:src="@drawable/drawable_horizontal_dotted" />
+
+        <TextView
+            android:id="@+id/labelScheduleEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.45"
+            android:gravity="center_vertical"
+            android:text="20:00"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:background="#e09f9f9f" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="@color/colorWhite"
+        android:paddingBottom="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/labelScheduleDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="16dp"
+            android:text="Appointment:"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/labelDoctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/labelScheduleDoctor"
+            android:layout_toEndOf="@+id/labelScheduleDoctor"
+            android:maxLines="1"
+            android:text="Dr.Suvonil Sarkar"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/labelPaymentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/labelScheduleDoctor"
+            android:layout_below="@+id/labelScheduleDoctor"
+            android:layout_marginTop="12dp"
+            android:text="Schedule Status:"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/payment_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/labelPaymentStatus"
+            android:layout_toEndOf="@+id/labelPaymentStatus"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:text="Pending"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+</LinearLayout>

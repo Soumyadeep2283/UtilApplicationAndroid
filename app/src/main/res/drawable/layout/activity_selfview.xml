@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SelfviewActivity">
+
+    <RelativeLayout
+        android:id="@+id/conference_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.rank.mydoctor.VideoFrame.VideoFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/videoFrame"/>
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:gravity="bottom|center">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:id="@+id/toolbarLayout">
+
+                <TextView
+                    android:id="@+id/timer_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tenDp"
+                    android:layout_marginLeft="@dimen/fiveDp"
+                    android:layout_marginRight="@dimen/tenDp"
+                    android:layout_marginBottom="@dimen/tenDp"
+                    android:gravity="left|center"
+                    android:text="Duration"
+                    android:visibility="gone"
+                    android:textColor="@color/colorWhite"/>
+
+                <!--ToggleButton
+                    android:id="@+id/connect"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/tenDp"
+                    android:layout_marginTop="0dp"
+                    android:alpha="0.9"
+                    android:background="@drawable/callend"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:visibility="gone"
+                    android:textOff=""
+                    android:textOn="" /-->
+
+
+                <ToggleButton
+                    android:id="@+id/camera_switch"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/thirtyDp"
+                    android:layout_marginTop="0dp"
+                    android:alpha="0.9"
+                    android:background="@drawable/camera_switch"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:shadowColor="@color/colorDarkRed"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="visible" />
+
+                <ToggleButton
+                    android:id="@+id/camera_privacy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/thirtyDp"
+                    android:layout_marginTop="0dp"
+                    android:alpha="0.9"
+                    android:background="@drawable/toggle_vieo"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:shadowColor="@color/colorDarkRed"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="visible"/>
+
+                <ToggleButton
+                    android:id="@+id/microphone_privacy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/thirtyDp"
+                    android:shadowColor="@color/colorDarkRed"
+                    android:layout_marginTop="0dp"
+                    android:alpha="0.9"
+                    android:background="@drawable/toggle_mike"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="visible"/>
+
+                <ToggleButton
+                    android:id="@+id/speaker_privacy"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/thirtyDp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:shadowColor="@color/colorDarkRed"
+                    android:background="@drawable/toggle_spekar"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/iv_menuplus"
+                    android:layout_width="@dimen/fiftyDp"
+                    android:layout_height="@dimen/fiftyDp"
+                    android:layout_margin="@dimen/sixteenDp"
+                    android:visibility="gone"
+                    android:background="@android:drawable/ic_menu_agenda"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="20dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:id="@+id/toolbarStatusLayout">
+                <TextView
+                    android:id="@+id/toolbarStatusFiller"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"/>
+                <TextView
+                    android:id="@+id/toolbarStatusText"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:maxLines="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    android:textColor="#f1f1f1"
+                    android:shadowColor="#0d0d0d"
+                    android:shadowRadius="2.0"
+                    android:shadowDx="-3.0"
+                    android:shadowDy="-3.0"
+                    android:text="Ready to Connect"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
